@@ -1,0 +1,1 @@
+require.config({bundles: {"readium-plugin-injectFonts":["readium_plugin_injectFonts","readium_plugin_injectFonts/main"]}});
