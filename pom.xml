@@ -5,9 +5,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.readium</groupId>
+  <groupId>org.nypl.readium</groupId>
   <artifactId>readium-shared-js</artifactId>
-  <version>0.20.0</version>
+  <version>0.22.0</version>
 
   <packaging>jar</packaging>
   <description>Readium SDK (Shared JavaScript components)</description>
