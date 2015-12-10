@@ -1,0 +1,1 @@
+require.config({bundles: {"readium-plugin-pageTransitions":["readium_plugin_pageTransitions","readium_plugin_pageTransitions/main"]}});

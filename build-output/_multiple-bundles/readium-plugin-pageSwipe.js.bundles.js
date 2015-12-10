@@ -1,0 +1,1 @@
+require.config({bundles: {"readium-plugin-pageSwipe":["hammerjs2","readium_plugin_pageSwipe","readium_plugin_pageSwipe/main"]}});

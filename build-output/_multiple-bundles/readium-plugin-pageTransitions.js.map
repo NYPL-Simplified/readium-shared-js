@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "../../plugins/pageTransitions/main.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+  "file": "readium-plugin-pageTransitions.js",
+  "sourcesContent": [
+    "define('readium_plugin_pageTransitions/main',['readium_js_plugins', 'jquery', 'underscore'], function (Plugins, $, _) {\n\n    Plugins.register(\"pageTransitions\", function (api) {\n\n        api.reader.on(ReadiumSDK.Events.CONTENT_DOCUMENT_LOADED, function ($iframe, spineItem) {\n            var document = $iframe[0].contentDocument;\n            $(document.documentElement).css('opacity', 0);\n\n            api.reader.once(ReadiumSDK.Events.PAGINATION_CHANGED, function () {\n\n                $(document.documentElement).css('opacity', 0);\n                setTimeout(function(){\n                    $(document.documentElement).css('transition', 'left 0.4s ease, opacity 0.5s ease');\n                    $(document.documentElement).css('opacity', 1);\n                }, 150);\n            });\n        });\n    });\n});\n\ndefine('readium_plugin_pageTransitions', ['readium_plugin_pageTransitions/main'], function (main) { return main; });\n\n"
+  ]
+}
