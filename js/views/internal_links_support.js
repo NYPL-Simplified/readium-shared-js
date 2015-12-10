@@ -181,15 +181,15 @@ var InternalLinksSupport = function(reader) {
 
         var epubContentDocument = $iframe[0].contentDocument;
 
-        $('a', epubContentDocument).click(function (clickEvent) {
+        $('a', epubContentDocument).on('mouseup touchend',function (clickEvent) {
             // Check for both href and xlink:href attribute and get value
             var href;
             if (clickEvent.currentTarget.attributes["xlink:href"]) {
-                
                 href = clickEvent.currentTarget.attributes["xlink:href"].value;
-            }
-            else {
+            } else if(clickEvent.currentTarget.attributes["href"]) {
                 href = clickEvent.currentTarget.attributes["href"].value;
+            } else {
+                return;
             }
 
             var overrideClickEvent = false;
