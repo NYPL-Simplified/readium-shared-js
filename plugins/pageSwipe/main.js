@@ -1,5 +1,5 @@
 define(['readium_js_plugins', 'jquery', 'underscore', 'hammerjs2'], function (Plugins, $, _, Hammer) {
-    var EDGE_TAP_AREA_WIDTH = 0.13; // as percent
+    var EDGE_TAP_AREA_WIDTH = 0.20; // as percent
 
     Plugins.register("pageSwipe", function (api) {
 
@@ -35,7 +35,7 @@ define(['readium_js_plugins', 'jquery', 'underscore', 'hammerjs2'], function (Pl
         }
 
         var outerHammer = new Hammer(document.documentElement);
-        outerHammer.on('swipeleft swiperight tap', handleGestureEvent(0.4));
+        outerHammer.on('swipeleft swiperight tap', handleGestureEvent(0.8));
 
         api.reader.on(ReadiumSDK.Events.CONTENT_DOCUMENT_LOADED, function ($iframe, spineItem) {
             var document = $iframe[0].contentDocument;
