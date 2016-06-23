@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.nypl.readium</groupId>
   <artifactId>readium-shared-js</artifactId>
-  <version>0.22.1</version>
+  <version>0.23.0</version>
 
   <packaging>jar</packaging>
   <description>Readium SDK (Shared JavaScript components)</description>
