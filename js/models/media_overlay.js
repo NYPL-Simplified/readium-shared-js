@@ -270,7 +270,7 @@ var MediaOverlay = function(packageModel) {
     this.playbackActiveClass = undefined;
 
     // Debug messages, must be false in production!
-    this.DEBUG = !!ReadiumSDK.DEBUG_MODE;
+    this.DEBUG = ReadiumSDK.DEBUG_MODE;
 
     /**
      * Returns the smil model corresponding to a spine item, or undefined if not found.
