@@ -36,7 +36,7 @@ define(["../globals", "jquery", "underscore", "eventEmitter", "../models/bookmar
  */
 var ScrollView = function (options, isContinuousScroll, reader) {
 
-    var _DEBUG = false;
+    var _DEBUG = ReadiumSDK.DEBUG_MODE;
 
     //https://github.com/jquery/jquery/commit/2d715940b9b6fdeed005cd006c8bf63951cf7fb2
     //https://github.com/jquery/jquery/commit/49833f7795d665ff1d543c4f71f29fca95b567e9

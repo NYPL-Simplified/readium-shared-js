@@ -26,9 +26,6 @@
 //  OF THE POSSIBILITY OF SUCH DAMAGE.
 
 define(['jquery','eventEmitter'], function($, EventEmitter) {
-    
-    var DEBUG = false;
-    
 /**
  * Top level ReadiumSDK namespace
  * @namespace
@@ -128,10 +125,12 @@ var Globals = {
     },
     
     logEvent: function(eventName, eventType, eventSource) {
-        if (DEBUG) {
+        if (this.DEBUG_MODE) {
             console.debug("#### ReadiumSDK.Events." + eventName + " - "+eventType+" - " + eventSource);
         }
-    }
+    },
+
+    DEBUG_MODE: false
 };
 $.extend(Globals, new EventEmitter());
 

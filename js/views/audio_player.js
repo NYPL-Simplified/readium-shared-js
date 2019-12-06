@@ -46,7 +46,7 @@ define(['jquery'],function($) {
 
         //var _isReadiumJS = typeof window.requirejs !== "undefined";
 
-        var DEBUG = false;
+        var DEBUG = ReadiumSDK.DEBUG_MODE;
 
         var _audioElement = new Audio();
         
