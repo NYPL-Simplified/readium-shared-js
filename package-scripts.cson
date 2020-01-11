@@ -111,10 +111,10 @@
 'build:scripts': '
 
     npm run
-        build:scripts:multiple --readium-shared-js:RJS_UGLY=no
+        build:scripts:multiple --readium-shared-js:RJS_UGLY=yes
     &&
     npm run
-        build:scripts:single --readium-shared-js:RJS_UGLY=no
+        build:scripts:single --readium-shared-js:RJS_UGLY=yes
     &&
     npm run
         build:scripts:umd --readium-shared-js:RJS_UGLY=no
